@@ -8,7 +8,6 @@ def GPT2_tokenizing(dataset, tokenizer, max_length=1024):
     output = tokenizer(
                 dataset,
                 return_tensors="pt",
-                # max_length=max_length,
              ).input_ids[0]
 
     for_drop_tokens_by_max_length = max_length * (output.size()[0] // max_length)
