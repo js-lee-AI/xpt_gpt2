@@ -23,7 +23,6 @@ import os
 import argparse
 import math
 
-# class XPTGPT2LMHeadModel(torch.nn.Module):
 class XPTGPT2LMHeadModel(GPT2PreTrainedModel):
     def __init__(self, config, new_vocab_config):
         super().__init__(config)
@@ -151,19 +150,6 @@ def load_pickle_file(dataset_path):
 
 
 if __name__ == "__main__":
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument('--model_name_or_path', choices=['gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'])
-#     parser.add_argument('--tgt_tokenizer_name_or_path', )
-#     parser.add_argument('--device', )
-    # parser.add_argument('--mode', action='store_const', )
-#     parser.add_argument('--phase', choices=['1', '2', '1,2'])
-#     parser.add_argument('--phase1_step', )
-#     parser.add_argument('--phase2_step', )
-#     parser.add_argument('--per_eval_step', )
-#     parser.add_argument('--eval_ratio', )
-#     parser.add_argument('--save_ckpt_path')
-#     parser.add_argument('--per_step_save_ckpt')
-
 
     # tokenize dataset
     tokenizer = AutoTokenizer.from_pretrained(
